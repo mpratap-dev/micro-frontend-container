@@ -1,0 +1,9 @@
+{
+  "imports": {
+    "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
+    "@oye/root-config": "//localhost:9000/oye-root-config.js",
+    "@oye/vue-app": "http://localhost:8080/js/app.js",
+    "@oye/nav": "http://localhost:9001/oye-nav.js",
+    "@oye/delivery": "http://localhost:9002/oye-delivery.js"
+  }
+}

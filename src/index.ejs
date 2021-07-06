@@ -33,31 +33,13 @@
 
     More information about shared dependencies can be found at https://single-spa.js.org/docs/recommended-setup#sharing-with-import-maps.
   -->
-  <script type="systemjs-importmap">
-    {
-      "imports": {
-        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
-        "react": "https://cdn.jsdelivr.net/npm/react@16.13.1/umd/react.production.min.js",
-        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@16.13.1/umd/react-dom.production.min.js"
-      }
-    }
-  </script>
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js" as="script">
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
   <!-- Add your organization's prod import map URL to this script's src  -->
   <script type="systemjs-importmap" src="/importmap.json"></script>
 
   <% if (isLocal) { %>
-  <script type="systemjs-importmap">
-    {
-      "imports": {
-        "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
-        "@oye/root-config": "//localhost:9000/oye-root-config.js",
-        "@oye/vue-app": "http://localhost:8080/js/app.js",
-        "@oye/nav": "http://localhost:9001/oye-nav.js"
-      }
-    }
-  </script>
+  <script type="systemjs-importmap" src="/local-importmap.json"></script> 
   <% } %>
 
   <!--
@@ -77,18 +59,7 @@
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
   <% } %>
-  <style>
-    body, html { 
-      margin: 0; 
-      padding: 0; 
-      font-size: 16px; 
-      font-family: Arial, Helvetica, sans-serif; 
-      height: 100%; 
-    }
-    * { 
-      box-sizing: border-box; 
-    }
-  </style>
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
   <noscript>
