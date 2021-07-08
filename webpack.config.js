@@ -16,7 +16,7 @@ module.exports = (webpackConfigEnv, argv) => {
   return merge(defaultConfig, {
     // modify the webpack config however you'd like to by adding to this object
     devServer: {
-      static: path.join(__dirname, 'src'),
+      static: path.join(__dirname, "src"),
     },
     plugins: [
       new HtmlWebpackPlugin({
@@ -28,5 +28,6 @@ module.exports = (webpackConfigEnv, argv) => {
         },
       }),
     ],
+    externals: ["single-spa", "react", "react-dom", "@material-ui/core"],
   });
 };
